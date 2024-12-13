@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Check Your Exam score</h1>
+    <p>Click the button to enter your score</p>
+    <button onclick="checkScore()">check score</button>
+    <h2 id="result"></h2>
+    <script>
+        function checkScore(){
+            const score = prompt("please enter your score");
+            const resultExam = document.getElementById('result');
+            if(score === '' || score < 0 ){
+                resultExam.innerHTML='please enter your score';
+            }else if(score>=50){
+                resultExam.innerText='you passed the test';
+            }else{
+                resultExam.innerText='you faild the test';
+            
+        }
+    }
+    </script>
+</body>
+</html>
